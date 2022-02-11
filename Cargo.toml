@@ -1,0 +1,18 @@
+[package]
+name = "mesagisto-client-jni"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate_type = ["cdylib"]
+
+[dependencies]
+robusta_jni = "0.2"
+
+# logging
+tracing="0.1.30"
+tracing-subscriber = { version = "0.3.8", features = ["env-filter","tracing-log"]}
+
+# mesagisto
+nats = "0.17.0"
+mesagisto-client = { rev = "49e7c5", git = "https://github.com/MeowCat-Studio/mesagisto-client-rs.git"}
